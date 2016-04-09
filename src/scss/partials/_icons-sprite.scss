@@ -1,0 +1,122 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$i-english-name: 'i-english';
+$i-english-x: 0px;
+$i-english-y: 0px;
+$i-english-offset-x: 0px;
+$i-english-offset-y: 0px;
+$i-english-width: 44px;
+$i-english-height: 30px;
+$i-english-total-width: 88px;
+$i-english-total-height: 60px;
+$i-english-image: '../images/icons-sprite.png';
+$i-english: (0px, 0px, 0px, 0px, 44px, 30px, 88px, 60px, '../images/icons-sprite.png', 'i-english', );
+$i-head-subnav-name: 'i-head_subnav';
+$i-head-subnav-x: 44px;
+$i-head-subnav-y: 30px;
+$i-head-subnav-offset-x: -44px;
+$i-head-subnav-offset-y: -30px;
+$i-head-subnav-width: 15px;
+$i-head-subnav-height: 10px;
+$i-head-subnav-total-width: 88px;
+$i-head-subnav-total-height: 60px;
+$i-head-subnav-image: '../images/icons-sprite.png';
+$i-head-subnav: (44px, 30px, -44px, -30px, 15px, 10px, 88px, 60px, '../images/icons-sprite.png', 'i-head_subnav', );
+$i-russian-name: 'i-russian';
+$i-russian-x: 44px;
+$i-russian-y: 0px;
+$i-russian-offset-x: -44px;
+$i-russian-offset-y: 0px;
+$i-russian-width: 44px;
+$i-russian-height: 30px;
+$i-russian-total-width: 88px;
+$i-russian-total-height: 60px;
+$i-russian-image: '../images/icons-sprite.png';
+$i-russian: (44px, 0px, -44px, 0px, 44px, 30px, 88px, 60px, '../images/icons-sprite.png', 'i-russian', );
+$i-ukrainian-name: 'i-ukrainian';
+$i-ukrainian-x: 0px;
+$i-ukrainian-y: 30px;
+$i-ukrainian-offset-x: 0px;
+$i-ukrainian-offset-y: -30px;
+$i-ukrainian-width: 44px;
+$i-ukrainian-height: 30px;
+$i-ukrainian-total-width: 88px;
+$i-ukrainian-total-height: 60px;
+$i-ukrainian-image: '../images/icons-sprite.png';
+$i-ukrainian: (0px, 30px, 0px, -30px, 44px, 30px, 88px, 60px, '../images/icons-sprite.png', 'i-ukrainian', );
+$spritesheet-width: 88px;
+$spritesheet-height: 60px;
+$spritesheet-image: '../images/icons-sprite.png';
+$spritesheet-sprites: ($i-english, $i-head-subnav, $i-russian, $i-ukrainian, );
+$spritesheet: (88px, 60px, '../images/icons-sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@font-face {
+	font-family:'MyriadPro';
+	src:url('../fonts/MyriadProRegular/MyriadProRegular.eot');
+	src:local('MyriadPro Regular'),
+		url('../fonts/MyriadProRegular/MyriadProRegular.eot#iefix') format("embedded-opentype"),
+		url('../fonts/MyriadProRegular/MyriadProRegular.woff') format("woff"),
+		url('../fonts/MyriadProRegular/MyriadProRegular.ttf') format("truetype");
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'MyriadPro';
+	src:url('../fonts/MyriadProSemiBold/MyriadProSemiBold.eot');
+	src:local('MyriadPro SemiBold'),
+		url('../fonts/MyriadProSemiBold/MyriadProSemiBold.eot#iefix') format("embedded-opentype"),
+		url('../fonts/MyriadProSemiBold/MyriadProSemiBold.woff') format("woff"),
+		url('../fonts/MyriadProSemiBold/MyriadProSemiBold.ttf') format("truetype");
+	font-weight:600;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'MyriadPro';
+	src:url('../fonts/MyriadProBold/MyriadProBold.eot');
+	src:local('MyriadPro Bold'),
+		url('../fonts/MyriadProBold/MyriadProBold.eot#iefix') format("embedded-opentype"),
+		url('../fonts/MyriadProBold/MyriadProBold.woff') format("woff"),
+		url('../fonts/MyriadProBold/MyriadProBold.ttf') format("truetype");
+	font-weight:700;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'PFBeauSansPro';
+	src:url('../fonts/PFBeauSansProSemiBold/PFBeauSansProSemiBold.eot');
+	src:local('PFBeauSansPro Bold'),
+		url('../fonts/PFBeauSansProSemiBold/PFBeauSansProSemiBold.eot#iefix') format("embedded-opentype"),
+		url('../fonts/PFBeauSansProSemiBold/PFBeauSansProSemiBold.woff') format("woff"),
+		url('../fonts/PFBeauSansProSemiBold/PFBeauSansProSemiBold.ttf') format("truetype");
+	font-weight:600;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'PFDinTextCondPro';
+	src:url('../fonts/PFDinTextCondProRegular/PFDinTextCondProRegular.eot');
+	src:local('PFDinTextCondPro Regular'),
+		url('../fonts/PFDinTextCondProRegular/PFDinTextCondProRegular.eot#iefix') format("embedded-opentype"),
+		url('../fonts/PFDinTextCondProRegular/PFDinTextCondProRegular.woff') format("woff"),
+		url('../fonts/PFDinTextCondProRegular/PFDinTextCondProRegular.ttf') format("truetype");
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'PFDinTextCondPro';
+	src:url('../fonts/PFDinTextCondProMedium/PFDinTextCondProMedium.eot');
+	src:local('PFDinTextCondPro Medium'),
+		url('../fonts/PFDinTextCondProMedium/PFDinTextCondProMedium.eot#iefix') format("embedded-opentype"),
+		url('../fonts/PFDinTextCondProMedium/PFDinTextCondProMedium.woff') format("woff"),
+		url('../fonts/PFDinTextCondProMedium/PFDinTextCondProMedium.ttf') format("truetype");
+	font-weight:500;
+	font-style:normal;
+}
+
+/* 100 = thin; 200 = extra-light; 300 = light; 400 = normal, book; 500 = medium; 600 = semi-bold; 700 = bold; 800 = heavy; 900 = black */

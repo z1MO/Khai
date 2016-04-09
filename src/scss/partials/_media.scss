@@ -1,0 +1,287 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1380px) {
+
+
+}
+
+@media only screen and (max-width : 1200px) {
+
+	.last-news-carousel {
+		max-width: 770px;
+		margin: 0 auto;
+	}
+	.footer {
+		&-bott {
+			padding-bottom: 20px;
+			&__col {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+	.possible-events {
+		padding: 50px 0;
+	}
+	.possible-event {
+		width: 33.33%;
+	}
+	.future-event {
+		&__image {
+			max-width: 60%;
+			margin: 0 auto 20px;
+		}
+		&__info {
+			margin-bottom: 20px;
+		}
+		&__date {
+			text-align: center;
+		}
+		&__content {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+	.page__content {
+		padding: 10px 0;
+	}
+	.direction-training {
+		height: 500px;
+		line-height: 500px;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	.home-section {
+		padding: 55px 0;
+	}
+	.possible-event {
+		width: 50%;
+		margin-bottom: 30px;
+		&__icon {
+			margin-bottom: 15px;
+		}
+		&__title {
+			margin-bottom: 10px;
+		}
+	}
+	.latest-news > .wrapper {
+		padding: 0 15px;
+	}
+	.last-news-carousel {
+		max-width: 370px;
+	}
+	.footer-nav {
+		margin-bottom: 20px;
+		&__colTop {
+			position: relative;
+			margin-bottom: 20px;
+			cursor: pointer;
+			span:before,
+			span:after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 50%;
+				background: #fff;
+				width: 15px;
+				height: 1px;
+				margin-top: -2px;
+				transform: rotate(-45deg);
+				transition: all 0.3s ease;
+			}
+			span:after {
+				right: 11px;
+				transform: rotate(45deg);
+			}
+			&--open {
+				span:before {
+					transform: rotate(45deg);
+				}
+				span:after {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+		&__links {
+			display: none;
+			&--active {
+				display: block;
+			}
+		}
+	}
+	.footer {
+		&-bott {
+			padding-top: 20px;
+			padding-bottom: 5px;
+			&__col {
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			&__copyright {
+				padding-top: 0;
+			}
+		}
+	}
+
+	.page {
+		&__title {
+			padding: 20px 0;
+			font-size: 30px;
+			&--nobg {
+				padding-bottom: 0;
+			}
+		}
+		&__main {
+			padding: 30px 0;
+		}
+	}
+	.departments-faculty {
+		margin-bottom: 40px;
+		&__image {
+			width: 65%;
+		}
+	}
+	.direction-training {
+		height: 300px;
+		line-height: 300px;
+	}
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+	.possible-events,
+	.home-section {
+		padding: 40px 0;
+	}
+	.possible-event {
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+		text-align: left;
+		&__icon {
+			float: left;
+			width: 60px;
+			height: 60px;
+			margin: 5px 20px 0 10px;
+			line-height: 60px;
+			$icons: ('handshake': 38px, 'microphone': 40px, 'doors': 38px, 'plane': 28px, 'warning': 41px);
+			@each $num, $size in $icons {
+				&.icon-#{$num} {
+					&:before {
+						font-size: #{$size - 5px};
+					}
+				}
+			}
+		}
+		&__title {
+			margin-bottom: 5px;
+			overflow: hidden;
+		}
+		&__descr {
+			overflow: hidden;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.last-news {
+		&__image {
+			margin-bottom: 12px;
+			height: auto !important;
+		}
+		&__title {
+			margin-top: 0;
+		}
+	}
+	.home-section {
+		&__top {
+			margin-bottom: 25px;
+		}
+		&__title {
+			font-size: 30px;
+		}
+	}
+	.latest-news__top {
+		margin-bottom: 75px;
+	}
+	.future-event {
+		> .container {
+			margin-bottom: 30px;
+			padding-bottom: 30px;
+		}
+		&__image {
+			max-width: 100%;
+		}
+		&__date {
+			display: none;
+		}
+		&__dateSmall {
+			display: block;
+		}
+		&__info {
+			margin-bottom: 25px;
+		}
+		&__content {
+			padding: 0;
+			border-left: none;
+		}
+	}
+	.departments-faculty {
+		&__image {
+			width: 100%;
+		}
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+	.possible-event {
+		&__icon {
+			margin-left: 0;
+		}
+	}
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
