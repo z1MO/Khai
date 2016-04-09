@@ -1,8 +1,8 @@
 {
-  "name": "XAI",
+  "name": "Khai",
   "description": "",
   "version": "1.0.0",
-  "author": "",
+  "author": "z1MO",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
